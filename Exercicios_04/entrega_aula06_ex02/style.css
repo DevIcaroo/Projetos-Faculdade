@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fdebd0;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f0932b;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}
+main {
+...
+}
+.meme {
+    display: grid;
+    flex-wrap: wrap;
+
+}
+.meme img {
+...
+}
+.meme:hover {
+...
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    background-color: #f0932b;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+​
