@@ -16,18 +16,26 @@ h1 {
     margin: 0;
 }
 main {
-...
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+
+
 }
 .meme {
     display: grid;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+    
 
 }
 .meme img {
-...
+
 }
 .meme:hover {
-...
+
 }
 
 footer {
@@ -40,4 +48,3 @@ footer {
     padding: 10px;
     text-align: center;
 }
-​
