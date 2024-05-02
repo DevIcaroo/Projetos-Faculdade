@@ -4,4 +4,3 @@ if not any(bit in '01' for bit in binario):
 else:
     decimal = int(binario, 2)
     print(f"O número {binario} em decimal é {decimal}.")
-

@@ -1,55 +1,86 @@
-def bin_para_decimal(numero):
-    return int(numero, 2)
-def octal_para_decimal(numero):
-    return int(numero, 8)
-def hexa_para_decimal(numero):
-    return int(numero, 16)
+def bin_para_dec(num):
+    return int(num, 2)
+def bin_para_oct(num):
+    return oct(int(num, 2))[2:]
+def bin_para_hex(num):
+    return hex(int(num, 2))[2:]
+def dec_para_bin(num):
+    return bin(int(num))[2:]
+def dec_para_oct(num):
+    return oct(int(num))[2:]
+def dec_para_hex(num):
+    return hex(int(num))[2:]
+def oct_para_bin(num):
+    return bin(int(num, 8))[2:]
+def oct_para_dec(num):
+    return int(num, 8)
+def oct_para_hex(num):
+    return hex(int(num, 8))[2:]
+def hex_para_bin(num):
+    return bin(int(num, 16))[2:]
+def hex_para_dec(num):
+    return int(num, 16)
+def hex_para_oct(num):
+    return oct(int(num, 16))[2:]
 
-def dec_para_binario(numero):
-    return bin(numero)
-def dec_para_octal(numero):
-    return oct(numero)
-def bin_para_hexadecimal(numero):
-    return hex(numero)
+def show_menu():
+    print("Escolha a base origem:")
+    print("1. Binário")
+    print("2. Octal")
+    print("3. Decimal")
+    print("4. Hexadecimal")
+    escolha_origem = int(input("Digite o número da opção desejada: "))
+    print("Escolha a base de destino:")
+    print("1. Binário")
+    print("2. Octal")
+    print("3. Decimal")
+    print("4. Hexadecimal")
+    escolha_destino = int(input("Digite o número da opção desejada: "))
+    num = input("Digite o número a ser convertido: ")
+    return escolha_origem, escolha_destino, num
 
+def convert_bases(escolha_origem, escolha_destino, num):
+    if escolha_origem == 1:
+        if escolha_destino == 1:
+            return num
+        elif escolha_destino == 2:
+            return bin_para_oct(num)
+        elif escolha_destino == 3:
+            return bin_para_dec(num)
+        elif escolha_destino == 4:
+            return bin_para_hex(num)
+    elif escolha_origem == 2:
+        if escolha_destino == 1:
+            return oct_para_bin(num)
+        elif escolha_destino == 2:
+            return num
+        elif escolha_destino == 3:
+            return oct_para_dec(num)
+        elif escolha_destino == 4:
+            return oct_para_hex(num)
+    elif escolha_origem == 3:
+        if escolha_destino == 1:
+            return dec_para_bin(num)
+        elif escolha_destino == 2:
+            return dec_para_oct(num)
+        elif escolha_destino == 3:
+            return num
+        elif escolha_destino == 4:
+            return dec_para_hex(num)
+    elif escolha_origem == 4:
+        if escolha_destino == 1:
+            return hex_para_bin(num)
+        elif escolha_destino == 2:
+            return hex_para_oct(num)
+        elif escolha_destino == 3:
+            return hex_para_dec(num)
+        elif escolha_destino == 4:
+            return num
 
+def conversor():
+    escolha_origem, escolha_destino, num = show_menu()
+    result = convert_bases(escolha_origem, escolha_destino, num)
+    print("Resultado:", result)
 
-
-
-while True:  
-    print("Escolha uma opção entre: Binario, Octal, Decimal, Hexadecimal")   
-    print("1) Binario")  
-    print("2) Octal")  
-    print("3) Decimal")
-    print("4) Hexadecimal") 
-    print("0) para sair")
-
-    escolha1 = input("Digite a letra correspondente à base numérica escolhida: ")  
-    if escolha1 == '0':
-        print("Programa encerrado.")
-        break
-    elif escolha1 not in {'1', '2', '3', '4'}:
-        print("Escolha inválida.") 
-        continue
-
-    print("Agora escolha uma opção para converter o numero escolhido entre: Binario, Octal, Decimal, Hexadecimal")      
-    print("1) Binario")  
-    print("2) Octal")  
-    print("3) Decimal")
-    print("4) Hexadecimal") 
-    print("0) para sair")
-    escolha2 = input("Digite a letra correspondente à base numérica escolhida: ")  
-    if escolha2 == '0':
-        print("Programa encerrado.")
-    elif escolha2 not in ['1', '2', '3', '4']:
-        print("Escolha inválida.")
-        continue
-#main
-    input('Agora escreva o numero que quer converter: ')
-
-    if escolha1 == '1':
-        numero_decimal = bin_para_decimal(escolha1)
-    elif escolha1 == '2':
-        numero_decimal = octal_para_decimal(escolha1)
-    elif escolha1 == '3':
-        int(escolha1)
+if __name__ == "__conversor__":
+    conversor()
