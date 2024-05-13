@@ -77,10 +77,10 @@ def convert_bases(escolha_origem, escolha_destino, num):
         elif escolha_destino == 4:
             return num
 
-def conversor():
+def main():
     escolha_origem, escolha_destino, num = show_menu()
     result = convert_bases(escolha_origem, escolha_destino, num)
     print("Resultado:", result)
 
-if __name__ == "__conversor__":
-    conversor()
+if __name__ == "__main__":
+    main()
