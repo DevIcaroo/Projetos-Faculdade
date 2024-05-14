@@ -1,1 +1,0 @@
-print("Universidade Cruzeiro do Sul")

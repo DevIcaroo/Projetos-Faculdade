@@ -1,7 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: #fdebd0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 header {
     position: fixed;
@@ -16,33 +21,34 @@ h1 {
     margin: 0;
 }
 main {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    justify-content: center;
-
-
-}
-.meme {
+    background-color: #fff;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 800px;
-    margin: 0 auto;
-    
-
+    width: 80%;
+    margin: 80px 0 50px 0;
+    border: solid 3px #f0932b;
+    justify-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+.meme {
+    width: 80%;
+    border: solid 10px #e7a150;
+    border-radius: .5rem;
+    transition: .2s;
 }
 .meme img {
-
+    width: 100%;
 }
 .meme:hover {
-
+    border: solid 10px #f0932b;
+    transform: scale(1.1);
 }
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-
     background-color: #f0932b;
     color: #ffffff;
     padding: 10px;
